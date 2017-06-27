@@ -1,5 +1,0 @@
-C:\GitRepository\CLRInPractice\InterfaceInPractice\bin\Debug\InterfaceInPractice.dll
-C:\GitRepository\CLRInPractice\InterfaceInPractice\bin\Debug\InterfaceInPractice.pdb
-C:\GitRepository\CLRInPractice\InterfaceInPractice\obj\Debug\InterfaceInPractice.csprojResolveAssemblyReference.cache
-C:\GitRepository\CLRInPractice\InterfaceInPractice\obj\Debug\InterfaceInPractice.dll
-C:\GitRepository\CLRInPractice\InterfaceInPractice\obj\Debug\InterfaceInPractice.pdb
