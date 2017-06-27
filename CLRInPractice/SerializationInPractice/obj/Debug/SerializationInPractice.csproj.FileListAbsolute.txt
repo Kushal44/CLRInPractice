@@ -1,0 +1,17 @@
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\SerializationInPractice.dll
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\SerializationInPractice.pdb
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\Newtonsoft.Json.dll
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\Newtonsoft.Json.xml
+C:\KeepLearning\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.csprojResolveAssemblyReference.cache
+C:\KeepLearning\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.dll
+C:\KeepLearning\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.pdb
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\BusinessLayer.dll
+C:\KeepLearning\CLRInPractice\SerializationInPractice\bin\Debug\BusinessLayer.pdb
+C:\GitRepository\CLRInPractice\SerializationInPractice\bin\Debug\SerializationInPractice.dll
+C:\GitRepository\CLRInPractice\SerializationInPractice\bin\Debug\SerializationInPractice.pdb
+C:\GitRepository\CLRInPractice\SerializationInPractice\bin\Debug\BusinessLayer.dll
+C:\GitRepository\CLRInPractice\SerializationInPractice\bin\Debug\Newtonsoft.Json.dll
+C:\GitRepository\CLRInPractice\SerializationInPractice\bin\Debug\BusinessLayer.pdb
+C:\GitRepository\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.csprojResolveAssemblyReference.cache
+C:\GitRepository\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.dll
+C:\GitRepository\CLRInPractice\SerializationInPractice\obj\Debug\SerializationInPractice.pdb

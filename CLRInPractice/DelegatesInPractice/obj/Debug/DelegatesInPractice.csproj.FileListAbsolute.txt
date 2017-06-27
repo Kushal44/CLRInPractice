@@ -1,0 +1,9 @@
+C:\KeepLearning\CLRInPractice\DelegatesInPractice\bin\Debug\DelegatesInPractice.dll
+C:\KeepLearning\CLRInPractice\DelegatesInPractice\bin\Debug\DelegatesInPractice.pdb
+C:\KeepLearning\CLRInPractice\DelegatesInPractice\obj\Debug\DelegatesInPractice.dll
+C:\KeepLearning\CLRInPractice\DelegatesInPractice\obj\Debug\DelegatesInPractice.pdb
+C:\GitRepository\CLRInPractice\DelegatesInPractice\bin\Debug\DelegatesInPractice.dll
+C:\GitRepository\CLRInPractice\DelegatesInPractice\bin\Debug\DelegatesInPractice.pdb
+C:\GitRepository\CLRInPractice\DelegatesInPractice\obj\Debug\DelegatesInPractice.csprojResolveAssemblyReference.cache
+C:\GitRepository\CLRInPractice\DelegatesInPractice\obj\Debug\DelegatesInPractice.dll
+C:\GitRepository\CLRInPractice\DelegatesInPractice\obj\Debug\DelegatesInPractice.pdb
