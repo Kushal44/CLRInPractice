@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer;
+using Newtonsoft.Json;
 
 namespace GenericsInPractice
 {
@@ -20,6 +23,24 @@ namespace GenericsInPractice
     /// </remarks>
     public class GenericsExample
     {
+        public static void DisplayPerson()
+        {
+            var person = PersonProvider();
+            Console.WriteLine(person.ToString());
+        }
 
+        private static Person PersonProvider()
+        {
+            var inputJSON = "{}";
+            var person = Read<Person>(inputJSON);
+            return person;
+        }
+
+        private static T Read<T>(string jsonString) where T : class
+        {
+            var data = default(T);
+            data = JsonConvert.DeserializeObject<T>(jsonString);
+            return data;
+        }
     }
 }

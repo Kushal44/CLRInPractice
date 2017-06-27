@@ -14,38 +14,38 @@ namespace SerializationInPractice
     {
         #region Basic Serialization
         //Basic serialization using Binary formatter.
-        //public static void SerializeUsingBinaryFormatter()
-        //{
-        //    List<string> friends = new List<string>() { "Abhi", "Misra", "MJ", "Tak", "Maa", "Pal" };
-        //    var serializedStream = Serialize(friends);
-        //    serializedStream.Position = 0;
+        public static void SerializeUsingBinaryFormatter()
+        {
+            List<string> friends = new List<string>() { "Abhi", "Misra", "MJ", "Tak", "Maa", "Pal" };
+            var serializedStream = Serialize(friends);
+            serializedStream.Position = 0;
 
-        //    IEnumerable<string> result = (List<string>)Deserialize(serializedStream);
+            IEnumerable<string> result = (List<string>)Deserialize(serializedStream);
 
-        //    foreach (var r in result)
-        //    {
-        //        Console.WriteLine("{0}", r);
-        //    }
-        //}
+            foreach (var r in result)
+            {
+                Console.WriteLine("{0}", r);
+            }
+        }
 
-        //public static void SerializeUsingJsonFormatter()
-        //{
-        //    var patient = new Person() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        LastName = "LName",
-        //        Age = 25
-        //        //MedicalHistory =  new List<string>() {"Disease1", "Disease2", "Disease3"}
-        //    };
+        public static void SerializeUsingJsonFormatter()
+        {
+            var patient = new Person() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                LastName = "LName",
+                Age = 25
+                //MedicalHistory =  new List<string>() {"Disease1", "Disease2", "Disease3"}
+            };
 
-        //    var jsonStr = JsonSerializer(patient);
+            var jsonStr = JsonSerializer(patient);
 
-        //    Console.WriteLine(jsonStr);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<Person>(jsonStr);
-        //    deserializedObject.PersonArrived += PersonArrivedHandler;
-        //    Console.WriteLine(deserializedObject.ToString());
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<Person>(jsonStr);
+            deserializedObject.PersonArrived += PersonArrivedHandler;
+            Console.WriteLine(deserializedObject.ToString());
+        }
 
         private static Stream Serialize(Object objectGraph)
         {
@@ -75,98 +75,98 @@ namespace SerializationInPractice
             return jsonString;
         }
 
-        ////Serialization when new version has a new field.
-        //public static void SerializeUsingJsonFormatterWithNewField()
-        //{
-        //    var patient = new Patient() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        LastName = "LName",
-        //        Age = 25,
-        //        MedicalHistory = new List<string>() { "Disease1", "Disease2", "Disease3" }
-        //    };
+        //Serialization when new version has a new field.
+        public static void SerializeUsingJsonFormatterWithNewField()
+        {
+            var patient = new Patient() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                LastName = "LName",
+                Age = 25,
+                MedicalHistory = new List<string>() { "Disease1", "Disease2", "Disease3" }
+            };
 
-        //    var jsonStr = JsonSerializer(patient);
+            var jsonStr = JsonSerializer(patient);
 
-        //    Console.WriteLine(jsonStr);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<PersonV2>(jsonStr);
-        //    Console.WriteLine(deserializedObject.ToString());
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<PersonV2>(jsonStr);
+            Console.WriteLine(deserializedObject.ToString());
+        }
 
-        ////Serialization when new version deletes an existing field.
-        //public static void SerializeUsingJsonFormatterWithDeleteField()
-        //{
-        //    var personV2 = new PersonV2() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        MiddleName = "MName",
-        //        LastName = "LName",
-        //        Age = 25
-        //    };
+        //Serialization when new version deletes an existing field.
+        public static void SerializeUsingJsonFormatterWithDeleteField()
+        {
+            var personV2 = new PersonV2() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                MiddleName = "MName",
+                LastName = "LName",
+                Age = 25
+            };
 
-        //    var jsonStr = JsonSerializer(personV2);
+            var jsonStr = JsonSerializer(personV2);
 
-        //    Console.WriteLine(jsonStr);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<Person>(jsonStr);
-        //    Console.WriteLine(deserializedObject.ToString());
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<Person>(jsonStr);
+            Console.WriteLine(deserializedObject.ToString());
+        }
 
-        ////Serialization when new version change the name of the field
+        //Serialization when new version change the name of the field
 
-        //public static void SerializeUsingJsonFormatterWithChangeName()
-        //{
-        //    var person = new Person() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        LastName = "LName",
-        //        Age = 25
-        //    };
+        public static void SerializeUsingJsonFormatterWithChangeName()
+        {
+            var person = new Person() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                LastName = "LName",
+                Age = 25
+            };
 
-        //    var jsonStr = JsonSerializer(person);
-        //    Console.WriteLine(jsonStr);
+            var jsonStr = JsonSerializer(person);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<PersonV3>(jsonStr);
-        //    Console.WriteLine(deserializedObject.ToString());
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<PersonV3>(jsonStr);
+            Console.WriteLine(deserializedObject.ToString());
+        }
 
-        ////Serialization when access modifier of a field is changed from public to private.
+        //Serialization when access modifier of a field is changed from public to private.
 
-        //public static void SerializeUsingJsonFormatterWithAccessModifierChange()
-        //{
-        //    var patient = new Person() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        LastName = "LName",
-        //        Age = 25
-        //    };
+        public static void SerializeUsingJsonFormatterWithAccessModifierChange()
+        {
+            var patient = new Person() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                LastName = "LName",
+                Age = 25
+            };
 
-        //    var jsonStr = JsonSerializer(patient);
-        //    Console.WriteLine(jsonStr);
+            var jsonStr = JsonSerializer(patient);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<PersonV4>(jsonStr);
-        //    Console.WriteLine(deserializedObject.ToString());
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<PersonV4>(jsonStr);
+            Console.WriteLine(deserializedObject.ToString());
+        }
 
-        ////Serialization when method is added to the type.
+        //Serialization when method is added to the type.
 
-        //public static void SerializeUsingJsonFormatterWithNewMethodAdded()
-        //{
-        //    var patient = new Person() {
-        //        SSN = Guid.NewGuid(),
-        //        FirstName = "FName",
-        //        LastName = "LName",
-        //        Age = 25
-        //    };
+        public static void SerializeUsingJsonFormatterWithNewMethodAdded()
+        {
+            var patient = new Person() {
+                SSN = Guid.NewGuid(),
+                FirstName = "FName",
+                LastName = "LName",
+                Age = 25
+            };
 
-        //    var jsonStr = JsonSerializer(patient);
-        //    Console.WriteLine(jsonStr);
+            var jsonStr = JsonSerializer(patient);
+            Console.WriteLine(jsonStr);
 
-        //    var deserializedObject = JsonConvert.DeserializeObject<PersonV5>(jsonStr);
-        //    Console.WriteLine(deserializedObject.ToString());
-        //    Console.WriteLine("Is Older: {0}", deserializedObject.IsOlderThan(15));
-        //}
+            var deserializedObject = JsonConvert.DeserializeObject<PersonV5>(jsonStr);
+            Console.WriteLine(deserializedObject.ToString());
+            Console.WriteLine("Is Older: {0}", deserializedObject.IsOlderThan(15));
+        }
 
         #endregion
 
