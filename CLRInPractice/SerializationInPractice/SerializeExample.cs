@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using BusinessLayer;
+using Newtonsoft.Json.Linq;
 
 namespace SerializationInPractice
 {
@@ -150,7 +151,6 @@ namespace SerializationInPractice
         }
 
         //Serialization when method is added to the type.
-
         public static void SerializeUsingJsonFormatterWithNewMethodAdded()
         {
             var patient = new Person() {
@@ -189,18 +189,23 @@ namespace SerializationInPractice
 
             //Serialize(person);
 
-            
-            //****Deserialize****//
+            ////****Deserialize****//
             using (var fs = new FileStream("Input.dat", FileMode.Open))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 var obj = formatter.Deserialize(fs);
+                //Person.ToString gets called.
                 Console.WriteLine(obj.ToString());
             }
         }
 
+        /// <summary>
+        /// JSON formatter does NOT include the assembly identity having the Type to be serialized.
+        /// This example shows how to load that assembly in AppDomain and then deserialize and instantiate the object for that type. 
+        /// </summary>
         public static void PersistSerializedObjectGraphInJSON()
         {
+            //****Serialize****//
             //var person = new Person() {
             //    SSN = Guid.NewGuid(),
             //    FirstName = "FName",
@@ -211,9 +216,10 @@ namespace SerializationInPractice
             //var jsonStr = JsonSerializer(person);
             //File.WriteAllText("Input.json", jsonStr);
 
-
-            var person = JsonConvert.DeserializeObject<Person>(
-                            File.ReadAllText("Input.json"));
+            //****Deserialize****//
+            var obj = JsonConvert.DeserializeObject(
+                            File.ReadAllText("Input.json")) as JObject;
+            var person = obj.ToObject<Person>();
             Console.WriteLine(person.ToString());
         }
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DelegatesInPractice;
 using GenericsInPractice;
+using InterfaceInPractice;
 using ReflectionInPractice;
 using SerializationInPractice;
 
@@ -23,7 +24,7 @@ namespace CLRInPractice
 
             //AClass.UsingLocalVariablesWithoutLambda(10);
 
-            GenericsExample.DisplayPerson();
+            //GenericsExample.DisplayPerson();
 
             #endregion
 
@@ -64,6 +65,13 @@ namespace CLRInPractice
             //SerializeExample.PersistSerializedObjectGraph();
 
             //SerializeExample.PersistSerializedObjectGraphInJSON();
+            #endregion
+
+            #region Interface In Practice
+
+            //InterfaceExample.InterfaceWithInheritanceImplementationForIDisposable();
+            //InterfaceExample.ExternalInterfaceImplementationMethod();
+
             #endregion
 
             Console.Read();

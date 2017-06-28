@@ -60,6 +60,10 @@
       <Project>{5d4ce470-628d-423b-8e9a-d4944bf87185}</Project>
       <Name>GenericsInPractice</Name>
     </ProjectReference>
+    <ProjectReference Include="..\InterfaceInPractice\InterfaceInPractice.csproj">
+      <Project>{0c89034c-db99-4a2a-b96e-bf2ef218cb9e}</Project>
+      <Name>InterfaceInPractice</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ReflectionInPractice\ReflectionInPractice.csproj">
       <Project>{dfca7a71-b72c-4dfa-9886-b79f751cc17d}</Project>
       <Name>ReflectionInPractice</Name>
