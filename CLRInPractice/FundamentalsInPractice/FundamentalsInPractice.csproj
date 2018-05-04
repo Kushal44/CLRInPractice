@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8279FB14-DD1A-4873-AD9F-8B9285B7332B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{B42C64E4-060E-4F40-AE06-64CC7089ACC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CLRInPractice</RootNamespace>
-    <AssemblyName>CLRInPractice</AssemblyName>
+    <RootNamespace>FundamentalsInPractice</RootNamespace>
+    <AssemblyName>FundamentalsInPractice</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -38,44 +37,14 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AnotherInternalClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
-      <Project>{321a071c-cb50-4664-bae4-9111d81d6079}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DelegatesInPractice\DelegatesInPractice.csproj">
-      <Project>{6112d53f-e395-4a4e-b5d2-b80d20470a51}</Project>
-      <Name>DelegatesInPractice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FundamentalsInPractice\FundamentalsInPractice.csproj">
-      <Project>{b42c64e4-060e-4f40-ae06-64cc7089acc4}</Project>
-      <Name>FundamentalsInPractice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GenericsInPractice\GenericsInPractice.csproj">
-      <Project>{5d4ce470-628d-423b-8e9a-d4944bf87185}</Project>
-      <Name>GenericsInPractice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InterfaceInPractice\InterfaceInPractice.csproj">
-      <Project>{0c89034c-db99-4a2a-b96e-bf2ef218cb9e}</Project>
-      <Name>InterfaceInPractice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReflectionInPractice\ReflectionInPractice.csproj">
-      <Project>{dfca7a71-b72c-4dfa-9886-b79f751cc17d}</Project>
-      <Name>ReflectionInPractice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SerializationInPractice\SerializationInPractice.csproj">
-      <Project>{88532c5a-a977-4b64-a28d-57c4fb3dbb35}</Project>
-      <Name>SerializationInPractice</Name>
-    </ProjectReference>
+    <Compile Include="ReferenceType.cs" />
+    <Compile Include="ValueType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

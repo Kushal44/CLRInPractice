@@ -43,4 +43,23 @@ namespace GenericsInPractice
             return data;
         }
     }
+
+    internal class Base
+    {
+        public virtual void M<T1, T2>()
+            where T1: struct
+            where T2: class
+        {
+        }
+    }
+
+    internal sealed class Derived : Base
+    {
+        //You can not change the constraints in the override method, can change the name of type parameter.
+        //public override void M<T3, T4>()
+        //    where T3: EventArgs
+        //    where T4: class
+        //{
+        //}
+    }
 }

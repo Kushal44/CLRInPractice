@@ -8,6 +8,7 @@ using GenericsInPractice;
 using InterfaceInPractice;
 using ReflectionInPractice;
 using SerializationInPractice;
+using FundamentalsInPractice;
 
 namespace CLRInPractice
 {
@@ -74,6 +75,21 @@ namespace CLRInPractice
 
             #endregion
 
+            #region Generics In Practice
+
+            //LinkedList.SameType();
+
+            //LinkedList.DifferentTypes();
+
+            #endregion
+
+            #region Fundamentals In Practice
+
+            ReferenceType.SwapAnyType();
+
+            new AnotherInternalClass().DoNothing();
+
+            #endregion
             Console.Read();
         }
     }

@@ -46,6 +46,7 @@
     <Compile Include="DelegateVarianceExample.cs" />
     <Compile Include="GenericsExample.cs" />
     <Compile Include="InterfaceVarianceExample.cs" />
+    <Compile Include="MulitpleDatatypeList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
